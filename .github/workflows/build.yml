@@ -1,4 +1,4 @@
- name: Build German Guru APK
+name: Build German Guru APK
 
 on:
 workflow_dispatch:
