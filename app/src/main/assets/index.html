@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>German Guru</title>
+<style>
+body{font-family:Arial,sans-serif;background:#eef2f8;color:#173451;margin:0;padding:18px}
+header{background:#0b385c;color:white;padding:25px;border-radius:18px}
+.card{background:white;padding:22px;margin:18px 0;border-radius:16px;box-shadow:0 3px 12px #ddd}
+button{background:#0b385c;color:white;padding:12px 18px;border:0;border-radius:10px;font-size:16px}
+h2{color:#0b385c}
+</style>
+</head>
+<body>
+<header>
+<h1>🇩🇪 German Guru</h1>
+<p>বাংলায় বুঝে জার্মান শেখো</p>
+</header>
+
+<div class="card">
+<h2>আজকের লেসন — A1</h2>
+<p>প্রতিদিন একটু একটু করে শেখো।</p>
+<p>লেসন ১: শুভেচ্ছা ও পরিচয়</p>
+</div>
+
+<div class="card">
+<h2>Hallo!</h2>
+<p>বাংলা অর্থ: হ্যালো / নমস্কার</p>
+<button onclick="speak('Hallo!')">🔊 উচ্চারণ শোনো</button>
+</div>
+
+<div class="card">
+<h2>Ich heiße Sadman.</h2>
+<p>বাংলা অর্থ: আমার নাম সাদমান।</p>
+<button onclick="speak('Ich heiße Sadman.')">🔊 বাক্য শোনো</button>
+</div>
+
+<div class="card">
+<h2>ছোট কুইজ</h2>
+<p>Hallo শব্দের অর্থ কী?</p>
+<button onclick="alert('সঠিক উত্তর!')">হ্যালো</button>
+<button onclick="alert('আবার চেষ্টা করো!')">ধন্যবাদ</button>
+</div>
+
+<div class="card">
+<h2>আমার শেখার পথ</h2>
+<p>A1 — একদম শুরু</p>
+<p>A2 — প্রাথমিক কথোপকথন</p>
+<p>B1 — দৈনন্দিন জার্মান</p>
+<p>B2 — উন্নত জার্মান</p>
+<p>🏥 Nursing Ausbildung প্রস্তুতি — পরবর্তী ধাপে যোগ করা হবে।</p>
+</div>
+
+<script>
+function speak(text){
+if('speechSynthesis' in window){
+let msg=new SpeechSynthesisUtterance(text);
+msg.lang='de-DE';
+speechSynthesis.speak(msg);
+}else{
+alert('এই ব্রাউজারে উচ্চারণ সুবিধা নেই।');
+}
+}
+</script>
+</body>
+</html>
